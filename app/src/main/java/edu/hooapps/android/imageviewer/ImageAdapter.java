@@ -40,12 +40,22 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             holder = (ViewHolder) view.getTag();
         }
+        // Set the data for the ImageView
         holder.url = getItem(position);
         holder.text.setText(holder.url);
         holder.bgText.setText(String.valueOf(position));
 
-        Picasso.with(context).load(holder.url).resize(SIZE, SIZE).into(holder.image);
-        Picasso.with(context).load(holder.url).resize(SIZE, SIZE).into(holder.bgImage);
+        // TODO ADD PICASSO CODE BELOW...
+        // Website- http://square.github.io/picasso/
+        // Load the image into the 'image' and 'bgImage' ImageViews
+        // To access the ImageViews the from the holder, use:
+        //      holder.image, holder.bgImage
+        // To access the url of the image, use:
+        //      holder.url
+
+        // TODO Line 1: Load picture into 'image'
+
+        // TODO Line 2: Load picture into 'bgImage'
 
         return view;
     }
